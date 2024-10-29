@@ -1,0 +1,107 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<header class="header-wrapper">
+  <section class="header">
+    <img src="/avatar.jpg" alt="Ricardo Cuauro" />
+    <div class="header-info">
+      <h1>Ricardo Cuauro</h1>
+      <p class="user">@odraciRdev</p>
+      <div class="social-icons">
+        <a
+          href="https://github.com/odracirdev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Icon name="github" size={24} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/ricardocuauro/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Icon name="linkedin" size={24} />
+        </a>
+      </div>
+    </div>
+  </section>
+  <div class="experience-wrapper">
+    <p><span>+10</span> años de experiencia</p>
+    <p><span>+20</span> sitios webs creados</p>
+  </div>
+</header>
+
+<style>
+  .header-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @media (width <= 768px) {
+      gap: 1rem;
+    }
+
+    h1,
+    p {
+      margin: 0;
+    }
+
+    & .header {
+      display: flex;
+      gap: 2rem;
+
+      & img {
+        width: 130px;
+        height: 100%;
+        aspect-ratio: 1;
+        border-radius: 9999px;
+        outline: 4px solid var(--blue);
+
+        @media (width <= 768px) {
+          width: 80px;
+        }
+      }
+
+      & .header-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+        height: max-content;
+
+        @media (width <= 768px) {
+          gap: 0.15rem;
+        }
+
+        & .user {
+          color: var(--blue);
+          font-size: 1.3rem;
+        }
+
+        & .social-icons {
+          display: flex;
+          gap: 1rem;
+          padding-top: 0.5rem;
+
+          & svg {
+            color: var(--light);
+          }
+        }
+      }
+    }
+
+    & .experience-wrapper {
+      display: flex;
+      gap: 2rem;
+
+      @media (width <= 768px) {
+        gap: 0;
+      }
+
+      & span {
+        font-weight: 700;
+        color: var(--blue);
+      }
+    }
+  }
+</style>

@@ -1,0 +1,13 @@
+---
+import Links from "@ui/Links.astro";
+import { socials } from "@data/social.data";
+---
+
+<section>
+  <h2>Comunidad</h2>
+  {
+    socials.map(({ link, icon, name, desc, color }) => (
+      <Links link={link} icon={icon} name={name} desc={desc} color={color} />
+    ))
+  }
+</section>

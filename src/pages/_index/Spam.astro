@@ -1,0 +1,13 @@
+---
+import Links from "@ui/Links.astro";
+import { spam } from "@data/spam.data";
+---
+
+<section>
+  <h2>Otros</h2>
+  {
+    spam.map(({ link, icon, name, desc, color }) => (
+      <Links link={link} icon={icon} name={name} desc={desc} color={color} />
+    ))
+  }
+</section>

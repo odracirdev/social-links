@@ -1,0 +1,53 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Header from "@sections/index/Header.astro";
+import About from "@sections/index/About.astro";
+import Community from "@sections/index/Community.astro";
+import Spam from "@sections/index/Spam.astro";
+
+const options = {
+  title: "Ricardo Cuauro | odraciRdev",
+  description:
+    "Frontend developer con +10 años de experiencia como freelancer.",
+};
+---
+
+<Layout options={options}>
+  <main>
+    <Header />
+    <About />
+    <Community />
+    <Spam />
+  </main>
+</Layout>
+
+<style>
+  main {
+    width: 690px;
+    padding-top: 80px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    margin: 0 auto;
+
+    @media (width <= 768px) {
+      gap: 2rem;
+    }
+  }
+
+  @media (width <= 750px) {
+    h1,
+    h2,
+    h3 {
+      margin-bottom: 18px;
+    }
+
+    main {
+      max-width: 85%;
+      padding: 40px 0;
+      margin: 0 auto;
+    }
+  }
+</style>
