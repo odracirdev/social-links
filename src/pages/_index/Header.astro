@@ -1,5 +1,16 @@
 ---
 import { Icon } from "astro-icon/components";
+
+const rrss = [
+  {
+    link: "https://github.com/odracirdev",
+    icon: "github",
+  },
+  {
+    link: "https://www.linkedin.com/in/ricardocuauro/",
+    icon: "linkedin",
+  },
+];
 ---
 
 <header class="header-wrapper">
@@ -9,26 +20,22 @@ import { Icon } from "astro-icon/components";
       <h1>Ricardo Cuauro</h1>
       <p class="user">@odraciRdev</p>
       <div class="social-icons">
-        <a
-          href="https://github.com/odracirdev"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Icon name="github" size={24} />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/ricardocuauro/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Icon name="linkedin" size={24} />
-        </a>
+        {
+          rrss.map(({ link, icon }) => (
+            <a href={link} target="_blank" rel="noopener noreferrer">
+              <Icon name={icon} size={24} />
+            </a>
+          ))
+        }
       </div>
     </div>
   </section>
   <div class="experience-wrapper">
-    <p><span>+10</span> años de experiencia</p>
-    <p><span>+20</span> sitios webs creados</p>
+    <p>💙 Community lover</p>
+    <p><span>|</span></p>
+    <p>🧩 Open source</p>
+    <p><span>|</span></p>
+    <p>🪠 Vanilla fan</p>
   </div>
 </header>
 
@@ -36,7 +43,7 @@ import { Icon } from "astro-icon/components";
   .header-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 
     @media (width <= 768px) {
       gap: 1rem;
@@ -92,7 +99,7 @@ import { Icon } from "astro-icon/components";
 
     & .experience-wrapper {
       display: flex;
-      gap: 2rem;
+      gap: 1rem;
 
       @media (width <= 768px) {
         gap: 0;
