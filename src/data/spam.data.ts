@@ -15,4 +15,11 @@ export const spam: ExternalLink[] = [
     desc: "Por si quieres mejorar el streaming o pagar algún servicio cloud.",
     color: "#FF5E5B",
   },
+  {
+    link: "https://storefordevs.com",
+    icon: "s4d",
+    name: "Store for devs",
+    desc: "Una tienda en línea con merch para desarrolladores.",
+    color: "#C49216",
+  },
 ];
